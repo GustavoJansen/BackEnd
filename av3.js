@@ -1,0 +1,84 @@
+const produtos = [
+    {
+        nome: "PROCESSADOR RYZEN 5 5500",
+        valor: 600,
+        quantidade: 20,
+        marca: "AMD",
+        codigo: 39519
+    },
+    {
+        nome: "PLACA MÃE B550M",
+        valor: 800,
+        quantidade: 30,
+        marca: "ASUS",
+        codigo: 6491
+    },
+     {
+        nome: "FONTE 600W BRONZE",
+        valor: 350,
+        quantidade: 20,
+        marca: "CORSAIR",
+        codigo: 9415
+    },
+    {
+        nome: "MEMORIA RAM 16GB",
+        valor: 800,
+        quantidade: 15,
+        marca: "CORSAIR",
+        codigo: 22365
+    },
+     {
+        nome: "GABINETE MID TOWER",
+        valor: 200,
+        quantidade: 16,
+        marca: "HAYON",
+        codigo: 2107
+    },
+    {
+        nome: "PLACA DE VIDEO RX 6600",
+        valor: 1400,
+        quantidade: 10,
+        marca: "AMD",
+        codigo: 10472
+    },
+     {
+        nome: "MONITOR 180HZ 0.5MS 32'",
+        valor: 150,
+        quantidade: 6,
+        marca: "SANSUNG",
+        codigo: 7607
+    },
+    {
+        nome: "TECLADO REDRAGON KUMARA 75%",
+        valor: 400,
+        quantidade: 30,
+        marca: "REDRAGON",
+        codigo: 1234
+    },
+     {
+        nome: "MOUSE PAD 30X90",
+        valor: 100,
+        quantidade: 20,
+        marca: "MANCER",
+        codigo: 1908
+    },
+    {
+        nome: "MOUSE ATACK SHARK",
+        valor: 150,
+        quantidade: 15,
+        marca: "ATACK SHARK",
+        codigo: 1804 
+    },
+]
+
+
+const produtosJSON = JSON.stringify(produtos)
+
+
+const fs = require("fs")
+fs.writeFileSync("produtos.json", produtosJSON)
+
+const produtosArquivo = require("./produtos.json")
+
+
+
